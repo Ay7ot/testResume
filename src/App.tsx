@@ -87,8 +87,31 @@ function App() {
           </div>
         </section>
        </div>
-       <div className="px-[2.5rem] py-[5rem] w-[30%] bg-blue-300 rounded-r-md">
-          hello
+       <div className="px-[2rem] text-white py-[8rem] w-[30%] bg-blue-500 rounded-r-md">
+          
+          <div className="text-xs flex flex-col gap-2">
+            <h2 className="text-lg font-semibold">Details</h2>
+            <p>Nigeria</p>
+            <p>+2348075200170</p>
+            <a href='mailto:' >ayomidotzee@gmail.com</a>
+          </div>
+
+          <div className="mt-6 flex flex-col gap-2">
+            <h2 className="text-lg font-semibold">Links</h2>
+            <p className=" text-xs">Portfolio</p>
+            <p className=" text-xs">GitHub</p>
+          </div>
+          
+          <div className="mt-6 ">
+            <h2 className="text-lg font-semibold">Skills</h2>
+            <ul className="list-none flex flex-col gap-2 mt-2">
+              <li className="text-xs">React</li>
+              <li className="text-xs">TypeScript</li>
+              <li className="text-xs">Git</li>
+              <li className="text-xs">Nodejs</li>
+              <li className="text-xs">Javascript</li>
+            </ul>
+          </div>
        </div>
       </div>
     </div>
