@@ -32,3 +32,25 @@ ul {
 ul > li {
   font-size: small;
 }
+
+.item {
+  transform: scale(0.5);
+  transform-origin: center;
+}
+
+.inputDetails {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width:1024px) {
+  .inputDetails{
+    margin-top: 0px;
+  }
+}
+
+.inputDetails p {
+  font-size: 0.8rem;
+  color: #979393;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
