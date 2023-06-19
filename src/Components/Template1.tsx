@@ -1,9 +1,12 @@
 import html2pdf from "html2pdf.js";
 import {useRef} from 'react'
+import { useAppContext } from "../useAppContext";
 
 export default function Template1() {
     const itemref = useRef<HTMLDivElement | null>(null)
   
+    const {userDetails} = useAppContext()
+    const {firstName, lastName, jobTitle, country, email, phone} = userDetails
 
     async function generatePdf(){
 
@@ -36,8 +39,8 @@ export default function Template1() {
                         <div className="flex gap-4 items-center">
                         <img src="Aydot.jpg" className="mt-4 rounded-full w-[60px] h-[60px]"/>
                         <div className="flex flex-col gap-2">
-                            <h1 className="font-sans text-3xl font-semibold">Ayomide Ibiteye</h1>
-                            <h2 className="font-serif text-sm">FRONTEND ENGINEER</h2>
+                            <h1 className="font-sans text-[1.7rem] font-semibold">{`${firstName} ${lastName}`}</h1>
+                            <h2 className="font-serif text-sm">{`${jobTitle.toUpperCase()}`}</h2>
                         </div>
                         </div>
 
@@ -87,9 +90,9 @@ export default function Template1() {
                         
                         <div className="text-xs flex flex-col gap-2">
                             <h2 className="text-lg font-semibold">Details</h2>
-                            <p>Nigeria</p>
-                            <p>+2348075200170</p>
-                            <a href='mailto:' >ayomidtestotzee@gmail.com</a>
+                            <p>{`${country}`}</p>
+                            <p>{`${phone}`}</p>
+                            <a href='mailto:' >{`${email}`}</a>
                         </div>
 
                         <div className="mt-6 flex flex-col gap-2">
