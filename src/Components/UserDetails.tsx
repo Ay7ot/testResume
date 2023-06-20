@@ -16,7 +16,7 @@ export default function UserDetails() {
                     <input 
                         type="text"
                         value={jobTitle}
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setJob',
@@ -28,17 +28,18 @@ export default function UserDetails() {
                     />
                 </div>
                 <div className="mt-6 lg:mt-9">
-                    <div className="flex items-center gap-3">
-                        <img src="userImg.jpeg" className="w-[45px] p-2 lg:p-1 rounded-md bg-gray-300 "/>
-                        <p className="text-blue-500 text-sm">Upload photo</p>
-                    </div>
+                        <label className="flex items-center gap-3 cursor-pointer">
+                            <img src="userImg.jpeg" className="w-[45px] p-2 lg:p-1 rounded-md bg-gray-300 "/>
+                            <p className="text-blue-500 text-sm">Upload photo</p>   
+                                <input type="file"/>
+                        </label>
                 </div>
                 <div className="inputDetails">
                     <p>First Name</p>
                     <input 
                         value={firstName}
                         type="text"
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setFirstName',
@@ -54,7 +55,7 @@ export default function UserDetails() {
                     <input 
                         value={lastName}
                         type="text"
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setLastName',
@@ -70,7 +71,7 @@ export default function UserDetails() {
                     <input 
                         value={email}
                         type="email"
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setEmail',
@@ -85,7 +86,7 @@ export default function UserDetails() {
                     <p>Phone</p>
                     <input 
                         type="text"
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setPhone',
@@ -101,7 +102,7 @@ export default function UserDetails() {
                     <input 
                         value={country}
                         type="text"
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setCountry',
@@ -117,7 +118,7 @@ export default function UserDetails() {
                     <input 
                         value={city}
                         type="text"
-                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none"
+                        className="w-full text-[0.9rem] bg-gray-300 px-4 py-3 rounded-md outline-none "
                         onChange={(e)=>{
                             dispatch({
                                 type: 'setCity',
